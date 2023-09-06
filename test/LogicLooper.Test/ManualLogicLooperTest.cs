@@ -18,7 +18,7 @@ public class ManualLogicLooperTest
         });
         looper.Tick();
 
-        elapsed.Should().BeCloseTo(TimeSpan.FromMilliseconds(1000 / 60), precision: 1);
+        elapsed.Should().BeCloseTo(TimeSpan.FromMilliseconds(1000 / 60), precision: TimeSpan.FromMilliseconds(1));
     }
 
     [Fact]
@@ -35,7 +35,7 @@ public class ManualLogicLooperTest
         });
         looper.Tick();
 
-        elapsed.Should().BeCloseTo(TimeSpan.FromMilliseconds(1000 / 30), precision: 1);
+        elapsed.Should().BeCloseTo(TimeSpan.FromMilliseconds(1000 / 30), precision: TimeSpan.FromMilliseconds(1));
     }
 
     [Fact]
